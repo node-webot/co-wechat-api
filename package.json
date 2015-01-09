@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/node-webot/wechat-api.git"
+    "url": "git://github.com/node-webot/co-wechat-api.git"
   },
   "keywords": [
     "weixin",
