@@ -34,7 +34,7 @@ describe('api_mass_send.js', function () {
 
     describe('mock _uploadNews ok', function () {
       before(function () {
-        muk(urllib, 'request', function (url, opts, callback) {
+        muk(urllib, 'request', function (url, opts) {
           process.nextTick(function () {
             callback(new Error('mock invalid media_id'));
           });
@@ -57,7 +57,7 @@ describe('api_mass_send.js', function () {
 
     describe('mock _uploadNews ok', function () {
       before(function () {
-        muk(urllib, 'request', function (url, opts, callback) {
+        muk(urllib, 'request', function (url, opts) {
           process.nextTick(function () {
             callback(new Error('mock invalid media_id'));
           });
@@ -79,7 +79,7 @@ describe('api_mass_send.js', function () {
 
     describe('mock _uploadNews ok', function () {
       before(function () {
-        muk(urllib, 'request', function (url, opts, callback) {
+        muk(urllib, 'request', function (url, opts) {
           var data = {
             "type":"news",
             "media_id":"CsEf3ldqkAYJAU6EJeIkStVDSvffUJ54vqbThMgplD-VJXXof6ctX5fI6-aYyUiQ",
@@ -107,7 +107,7 @@ describe('api_mass_send.js', function () {
 
   describe('mock', function () {
     before(function () {
-      muk(api, 'massSend', function (opts, receivers, callback) {
+      muk(api, 'massSend', function (opts, receivers) {
         var data = {
           "errcode": 0,
           "errmsg": "send job submission success",
@@ -237,7 +237,7 @@ describe('api_mass_send.js', function () {
 
     describe('mock', function () {
       before(function () {
-        muk(api, 'uploadMPVideo', function (opts, callback) {
+        muk(api, 'uploadMPVideo', function (opts) {
           process.nextTick(function () {
             callback(null, {
               "media_id": "rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ",
@@ -288,7 +288,7 @@ describe('api_mass_send.js', function () {
   describe('uploadMPVideo', function () {
     describe('mock err', function () {
       before(function () {
-        muk(urllib, 'request', function (url, opts, callback) {
+        muk(urllib, 'request', function (url, opts) {
           process.nextTick(function () {
             callback(new Error('mock err'));
           });

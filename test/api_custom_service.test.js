@@ -10,7 +10,7 @@ describe('api_custom_service', function () {
   describe('getRecords', function () {
     describe('getRecords mock', function () {
       before(function () {
-        muk(urllib, 'request', function (url, args, callback) {
+        muk(urllib, 'request', function (url, args) {
           var data = {"recordlist": []};
           var res =  {
             headers: {

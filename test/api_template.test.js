@@ -10,7 +10,7 @@ describe('api_template', function () {
   var api = new API(config.appid, config.appsecret);
   var mockError = function () {
     before(function () {
-      muk(urllib, 'request', function (url, args, callback) {
+      muk(urllib, 'request', function (url, args) {
         var data = {"errcode":1, "errmsg":"mock error"};
         var res =  {
           headers: {

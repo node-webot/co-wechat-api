@@ -17,7 +17,7 @@ describe('api_shop_order', function () {
   });
 
   describe('getOrdersByStatus', function () {
-    it('should unauthorized: (callback)', function (done) {
+    it('should unauthorized: ()', function (done) {
       api.getOrdersByStatus(function (err, data, res) {
         expect(err).to.be.ok();
         expect(data).to.have.property('errcode', 48001);

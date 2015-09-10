@@ -20,7 +20,7 @@ describe('api_media.js', function () {
   describe('upload media', function () {
     ['Image', 'Voice', 'Video', 'Thumb'].forEach(function (method) {
       before(function () {
-        muk(urllib, 'request', function (url, args, callback) {
+        muk(urllib, 'request', function (url, args) {
           var resp = {
             "type":"image",
             "media_id":"usr5xL_gcxapoRjwH3bQZw_zKvcXL-DU4tRJtLtrtN71-3bXL52p3xX63ebp7tqA",
@@ -59,7 +59,7 @@ describe('api_media.js', function () {
 
   describe('get media with buffer', function () {
     before(function () {
-      muk(urllib, 'request', function (url, args, callback) {
+      muk(urllib, 'request', function (url, args) {
         var buffer = new Buffer('Hello world!');
         var res =  {
           headers: {
@@ -87,7 +87,7 @@ describe('api_media.js', function () {
 
   describe('get media with json', function () {
     before(function () {
-      muk(urllib, 'request', function (url, args, callback) {
+      muk(urllib, 'request', function (url, args) {
         var data = JSON.stringify({"errcode":40007, "errmsg":"invalid media_id"});
         var res =  {
           headers: {
@@ -115,7 +115,7 @@ describe('api_media.js', function () {
 
   describe('get media with err json', function () {
     before(function () {
-      muk(urllib, 'request', function (url, args, callback) {
+      muk(urllib, 'request', function (url, args) {
         var data = '{"errcode":40007, "errmsg":"invalid media_id"';
         var res =  {
           headers: {
