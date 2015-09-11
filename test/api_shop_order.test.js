@@ -26,7 +26,7 @@ describe('api_shop_order', function () {
       });
     });
 
-    it('should unauthorized with status(status, callback)', function (done) {
+    it('should unauthorized with status(status)', function (done) {
       api.getOrdersByStatus(2, function (err, data, res) {
         expect(err).to.be.ok();
         expect(data).to.have.property('errcode', 48001);
@@ -35,7 +35,7 @@ describe('api_shop_order', function () {
       });
     });
 
-    it('should unauthorized with beginTime(beginTime, callback)', function (done) {
+    it('should unauthorized with beginTime(beginTime)', function (done) {
       api.getOrdersByStatus(new Date(), function (err, data, res) {
         expect(err).to.be.ok();
         expect(data).to.have.property('errcode', 48001);
@@ -44,13 +44,13 @@ describe('api_shop_order', function () {
       });
     });
 
-    it('should exception: (string, callback)', function () {
+    it('should exception: (string)', function () {
       expect(function () {
         api.getOrdersByStatus('some string', function () {});
       }).to.throwException(/first parameter must be Number or Date/);
     });
 
-    it('should unauthorized with beginTime&endTime(status, endTime, callback)', function (done) {
+    it('should unauthorized with beginTime&endTime(status, endTime)', function (done) {
       api.getOrdersByStatus(2, new Date(), function (err, data, res) {
         expect(err).to.be.ok();
         expect(data).to.have.property('errcode', 48001);
@@ -59,13 +59,13 @@ describe('api_shop_order', function () {
       });
     });
 
-    it('should exception: (string, string, callback)', function () {
+    it('should exception: (string, string)', function () {
       expect(function () {
         api.getOrdersByStatus('some string', 'string', function () {});
       }).to.throwException(/first parameter must be Number and second parameter must be Date/);
     });
 
-    it('should unauthorized with beginTime&endTime(status, beginTime, endTime, callback)', function (done) {
+    it('should unauthorized with beginTime&endTime(status, beginTime, endTime)', function (done) {
       api.getOrdersByStatus(2, new Date(), new Date(), function (err, data, res) {
         expect(err).to.be.ok();
         expect(data).to.have.property('errcode', 48001);

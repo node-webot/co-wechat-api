@@ -61,7 +61,7 @@ var api = new API('appid', 'secret', function () {
 }, function (token) {
   // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
   // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
-  fs.writeFile('access_token.txt', JSON.stringify(token), callback);
+  fs.writeFile('access_token.txt', JSON.stringify(token));
 });
 ```
 
