@@ -23,8 +23,7 @@
     "co-fs": "^1.2.0",
     "formstream": ">=0.0.8",
     "httpx": "^1.0.0",
-    "streamx": "^1.0.0",
-    "urllib": "2.4.0"
+    "streamx": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*",

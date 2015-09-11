@@ -6,7 +6,7 @@ describe('api_menu.js', function () {
   var api = new API(config.appid, config.appsecret);
 
   it('createMenu should ok', function* () {
-    var menu = JSON.stringify(require('./fixture/menu.json'));
+    var menu = require('./fixture/menu.json');
     var result = yield* api.createMenu(menu);
     expect(result).to.have.property('errcode', 0);
     expect(result).to.have.property('errmsg', 'ok');
