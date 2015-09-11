@@ -50,9 +50,9 @@ API.mixin(require('./lib/api_js'));
 // 卡券接口
 API.mixin(require('./lib/api_card'));
 // 设备接口
-// API.mixin(require('./lib/api_device'));
+API.mixin(require('./lib/api_device'));
 // 摇一摇周边接口
-// API.mixin(require('./lib/api_shakearound'));
+API.mixin(require('./lib/api_shakearound'));
 // 门店管理接口
-// API.mixin(require('./lib/api_poi'));
+API.mixin(require('./lib/api_poi'));
 module.exports = API;
