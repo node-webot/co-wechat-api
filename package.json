@@ -34,7 +34,8 @@
     "mocha-lcov-reporter": "*",
     "muk": "*",
     "rewire": "*",
-    "istanbul-harmony": "*"
+    "istanbul-harmony": "*",
+    "urllib":"*"
   },
   "author": "Jackson Tian",
   "license": "MIT",
