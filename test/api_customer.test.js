@@ -1,7 +1,6 @@
 var config = require('./config');
 var API = require('../');
 var expect = require('expect.js');
-var urllib = require('urllib');
 var muk = require('muk');
 var puling = 'ofL4cs7hr04cJIcu600_W-ZwwxHg';
 var imageId = 'XDZxzuRWBPqI4R9n_nNR5uRVZVQCSneMoELyWKflwM2qF9K38vnVFzgaD97uCTUu';
