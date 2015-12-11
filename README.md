@@ -3,7 +3,7 @@ Wechat API(ES6版)
 微信公共平台API。
 
 ## 模块状态
-- [![NPM version](https://badge.fury.io/js/co-wechat-api.png)](http://badge.fury.io/js/co-wechat)
+- [![NPM version](https://badge.fury.io/js/co-wechat-api.png)](http://badge.fury.io/js/co-wechat-api)
 - [![Build Status](https://travis-ci.org/node-webot/co-wechat-api.png?branch=master)](https://travis-ci.org/node-webot/co-wechat-api)
 - [![Dependencies Status](https://david-dm.org/node-webot/co-wechat-api.png)](https://david-dm.org/node-webot/co-wechat-api)
 - [![Coverage Status](https://coveralls.io/repos/node-webot/co-wechat-api/badge.png)](https://coveralls.io/r/node-webot/co-wechat-api)
