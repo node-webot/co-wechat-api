@@ -30,4 +30,22 @@ describe('api_menu.js', function () {
     expect(result).to.have.property('errcode', 0);
     expect(result).to.have.property('errmsg', 'ok');
   });
+
+  it('addConditionalMenu should ok', function* () {
+    var conditional_menu = require('./fixture/conditional_menu.json');
+    var result = yield* api.addConditionalMenu(conditional_menu);
+    expect(result).to.have.property('errcode', 0);
+    expect(result).to.have.property('errmsg', 'ok');
+  });
+
+  it('delConditionalMenu should ok', function* () {
+    var result = yield* api.delConditionalMenu(config.menuid);
+    expect(result).to.have.property('errcode', 0);
+    expect(result).to.have.property('errmsg', 'ok');
+  });
+
+  it('tryConditionalMenu should ok', function* () {
+    var result = yield* api.tryConditionalMenu(config.user_id);
+    expect(result).to.only.have.keys('button');
+  });
 });
