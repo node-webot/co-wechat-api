@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "co-mocha": "1.0.3",
+    "co-mocha": "*",
     "expect.js": "*",
     "travis-cov": "*",
     "coveralls": "*",
