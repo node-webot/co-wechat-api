@@ -54,4 +54,13 @@ describe('api_group.js', function () {
       done();
     });
   });
+
+  it('moveUsersToGroup should ok', function (done) {
+    api.moveUsersToGroup([puling], 102, function (err, data, res) {
+      expect(err).not.to.be.ok();
+      expect(data).to.have.property('errcode', 0);
+      expect(data).to.have.property('errmsg', 'ok');
+      done();
+    });
+  });
 });
