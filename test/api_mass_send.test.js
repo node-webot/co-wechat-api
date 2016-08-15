@@ -19,15 +19,15 @@ describe('api_mass_send.js', function () {
 
   describe('_uploadNews', function () {
     var news = {
-      "articles": [
+      'articles': [
         {
-          "thumb_media_id": imageId,
-          "author":"xxx",
-          "title":"Happy Day",
-          "content_source_url":"www.qq.com",
-          "content":"content",
-          "digest":"digest",
-          "show_cover_pic":"1"
+          'thumb_media_id': imageId,
+          'author':'xxx',
+          'title':'Happy Day',
+          'content_source_url':'www.qq.com',
+          'content':'content',
+          'digest':'digest',
+          'show_cover_pic':'1'
         }
       ]
     };
@@ -81,9 +81,9 @@ describe('api_mass_send.js', function () {
       before(function () {
         muk(urllib, 'request', function (url, opts) {
           var data = {
-            "type":"news",
-            "media_id":"CsEf3ldqkAYJAU6EJeIkStVDSvffUJ54vqbThMgplD-VJXXof6ctX5fI6-aYyUiQ",
-            "created_at":1391857799
+            'type':'news',
+            'media_id':'CsEf3ldqkAYJAU6EJeIkStVDSvffUJ54vqbThMgplD-VJXXof6ctX5fI6-aYyUiQ',
+            'created_at':1391857799
           };
           process.nextTick(function () {
             callback(null, data);
@@ -109,9 +109,9 @@ describe('api_mass_send.js', function () {
     before(function () {
       muk(api, 'massSend', function (opts, receivers) {
         var data = {
-          "errcode": 0,
-          "errmsg": "send job submission success",
-          "msg_id": 34182
+          'errcode': 0,
+          'errmsg': 'send job submission success',
+          'msg_id': 34182
         };
         var res =  {
           headers: {
@@ -223,9 +223,9 @@ describe('api_mass_send.js', function () {
 
       it('should ok', function (done) {
         var opts = {
-          "media_id": movieId,
-          "title": "TITLE",
-          "description": "Description"
+          'media_id': movieId,
+          'title': 'TITLE',
+          'description': 'Description'
         };
         api.massSendMPVideo(opts, [puling], function (err, data) {
           expect(err).to.be.ok();
@@ -240,9 +240,9 @@ describe('api_mass_send.js', function () {
         muk(api, 'uploadMPVideo', function (opts) {
           process.nextTick(function () {
             callback(null, {
-              "media_id": "rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ",
-              "title": "TITLE",
-              "description": "Description"
+              'media_id': 'rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ',
+              'title': 'TITLE',
+              'description': 'Description'
             });
           });
         });
@@ -253,9 +253,9 @@ describe('api_mass_send.js', function () {
       });
       it('send to openids should ok', function (done) {
         var opts = {
-          "media_id": "rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ",
-          "title": "TITLE",
-          "description": "Description"
+          'media_id': 'rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ',
+          'title': 'TITLE',
+          'description': 'Description'
         };
         api.massSendMPVideo(opts, [puling], function (err, data) {
           expect(err).to.be.ok();
@@ -301,9 +301,9 @@ describe('api_mass_send.js', function () {
 
       it('should ok', function (done) {
         var opts = {
-          "media_id": "rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ",
-          "title": "TITLE",
-          "description": "Description"
+          'media_id': 'rF4UdIMfYK3efUfyoddYRMU50zMiRmmt_l0kszupYh_SzrcW5Gaheq05p_lHuOTQ',
+          'title': 'TITLE',
+          'description': 'Description'
         };
         api.uploadMPVideo(opts, function (err, data) {
           expect(err).to.be.ok();

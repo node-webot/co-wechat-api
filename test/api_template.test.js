@@ -11,7 +11,7 @@ describe('api_template', function () {
   var mockError = function () {
     before(function () {
       muk(urllib, 'request', function (url, args) {
-        var data = {"errcode":1, "errmsg":"mock error"};
+        var data = {'errcode':1, 'errmsg':'mock error'};
         var res =  {
           headers: {
             'content-type': 'application/json'
@@ -36,8 +36,8 @@ describe('api_template', function () {
       var topcolor = '#FF0000'; // 顶部颜色
       var data = {
         user: {
-          "value":'黄先生',
-          "color":"#173177"
+          'value':'黄先生',
+          'color':'#173177'
         }
       };
       api.sendTemplate(puling, templateId, url, topcolor, data, function (err, data, res) {
@@ -64,8 +64,8 @@ describe('api_template', function () {
         var topcolor = '#FF0000'; // 顶部颜色
         var data = {
           user: {
-            "value":'黄先生',
-            "color":"#173177"
+            'value':'黄先生',
+            'color':'#173177'
           }
         };
         api.sendTemplate(puling, templateId, url, topcolor, data, function (err, data, res) {

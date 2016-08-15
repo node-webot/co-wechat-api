@@ -13,7 +13,7 @@ describe('api_customer', function () {
   var mockError = function () {
     before(function () {
       muk(urllib, 'request', function (url, args) {
-        var data = {"errcode":1, "errmsg":"mock error"};
+        var data = {'errcode':1, 'errmsg':'mock error'};
         var res =  {
           headers: {
             'content-type': 'application/json'
@@ -155,8 +155,8 @@ describe('api_customer', function () {
       title: '音乐标题', // 可选
       description: '描述内容', // 可选
       musicurl: 'http://url.cn/xxx', // 音乐文件地址
-      hqmusicurl: "HQ_MUSIC_URL",
-      thumb_media_id: "THUMB_MEDIA_ID"
+      hqmusicurl: 'HQ_MUSIC_URL',
+      thumb_media_id: 'THUMB_MEDIA_ID'
     };
 
     it('sendMusic should ok', function (done) {
@@ -191,16 +191,16 @@ describe('api_customer', function () {
   describe('sendNews', function () {
     var articles = [
       {
-        "title":"Happy Day",
-        "description":"Is Really A Happy Day",
-        "url":"URL",
-        "picurl":"PIC_URL"
+        'title':'Happy Day',
+        'description':'Is Really A Happy Day',
+        'url':'URL',
+        'picurl':'PIC_URL'
       },
       {
-        "title":"Happy Day",
-        "description":"Is Really A Happy Day",
-        "url":"URL",
-        "picurl":"PIC_URL"
+        'title':'Happy Day',
+        'description':'Is Really A Happy Day',
+        'url':'URL',
+        'picurl':'PIC_URL'
       }
     ];
 

@@ -4,8 +4,12 @@ TIMEOUT = 20000
 ISTANBUL = ./node_modules/.bin/istanbul
 MOCHA = ./node_modules/mocha/bin/_mocha
 COVERALLS = ./node_modules/coveralls/bin/coveralls.js
+ESLINT = ./node_modules/.bin/eslint
 
-test:
+lint:
+	@$(ESLINT) --fix lib index.js test
+
+test: lint
 	@NODE_ENV=test $(MOCHA) -R $(REPORTER) -t $(TIMEOUT) \
 		$(MOCHA_OPTS) \
 		$(TESTS)

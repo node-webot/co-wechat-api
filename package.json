@@ -6,11 +6,6 @@
   "scripts": {
     "test": "make test-all"
   },
-  "config": {
-    "travis-cov": {
-      "threshold": 98
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/node-webot/co-wechat-api.git"
@@ -22,25 +17,29 @@
   "dependencies": {
     "co-fs": "^1.2.0",
     "formstream": ">=0.0.8",
-    "httpx": "^1.0.0",
-    "streamx": "^1.0.0"
+    "httpx": "^2.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
     "co-mocha": "*",
-    "expect.js": "*",
-    "travis-cov": "*",
     "coveralls": "*",
+    "eslint": "~3.3.0",
+    "expect.js": "*",
+    "istanbul": "*",
+    "mocha": "*",
     "mocha-lcov-reporter": "*",
     "muk": "*",
     "rewire": "*",
-    "istanbul": "*",
-    "urllib":"*"
+    "travis-cov": "*",
+    "urllib": "*"
   },
   "author": "Jackson Tian",
   "license": "MIT",
   "readmeFilename": "README.md",
   "directories": {
     "test": "test"
-  }
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
 }

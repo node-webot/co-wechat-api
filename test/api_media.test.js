@@ -22,9 +22,9 @@ describe('api_media.js', function () {
       before(function () {
         muk(urllib, 'request', function (url, args) {
           var resp = {
-            "type":"image",
-            "media_id":"usr5xL_gcxapoRjwH3bQZw_zKvcXL-DU4tRJtLtrtN71-3bXL52p3xX63ebp7tqA",
-            "created_at":1383233542
+            'type':'image',
+            'media_id':'usr5xL_gcxapoRjwH3bQZw_zKvcXL-DU4tRJtLtrtN71-3bXL52p3xX63ebp7tqA',
+            'created_at':1383233542
           };
           process.nextTick(function () {
             callback(null, resp);
@@ -88,7 +88,7 @@ describe('api_media.js', function () {
   describe('get media with json', function () {
     before(function () {
       muk(urllib, 'request', function (url, args) {
-        var data = JSON.stringify({"errcode":40007, "errmsg":"invalid media_id"});
+        var data = JSON.stringify({'errcode':40007, 'errmsg':'invalid media_id'});
         var res =  {
           headers: {
             'content-type': 'application/json'

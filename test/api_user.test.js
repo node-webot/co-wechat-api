@@ -55,7 +55,7 @@ describe('api_user', function () {
         expect(err).not.to.be.ok();
         expect(data).to.only.have.keys('user_info_list');
         done();
-      })
+      });
     });
   });
 });

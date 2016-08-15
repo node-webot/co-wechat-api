@@ -11,7 +11,7 @@ describe('api_custom_service', function () {
     describe('getRecords mock', function () {
       before(function () {
         muk(urllib, 'request', function (url, args) {
-          var data = {"recordlist": []};
+          var data = {'recordlist': []};
           var res =  {
             headers: {
               'content-type': 'application/json'
@@ -29,11 +29,11 @@ describe('api_custom_service', function () {
 
       it('getRecords should ok', function (done) {
         var condition = {
-          "starttime" : 123456789,
-          "endtime" : 987654321,
+          'starttime' : 123456789,
+          'endtime' : 987654321,
           // "openid" : "OPENID",
-          "pagesize" : 10,
-          "pageindex" : 1,
+          'pagesize' : 10,
+          'pageindex' : 1,
         };
 
         api.getRecords(condition, function (err, data, res) {
