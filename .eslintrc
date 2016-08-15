@@ -38,7 +38,8 @@
     "no-undef": 2,
     "callback-return": [2, ["callback", "cb", "next"]],
     "global-require": 0,
-    "no-console": 0
+    "no-console": 0,
+    "require-yield": 0
   },
   "env": {
     "es6": true,

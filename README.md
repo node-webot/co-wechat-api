@@ -44,7 +44,7 @@ $ npm install co-wechat-api
 var WechatAPI = require('co-wechat-api');
 
 var api = new WechatAPI(appid, appsecret);
-var result = yield* api.updateRemark('open_id', 'remarked');
+var result = yield api.updateRemark('open_id', 'remarked');
 ```
 
 ### 多进程
