@@ -1,8 +1,8 @@
 'use strict';
 
-var API = require('../');
-var expect = require('expect.js');
-var config = require('./config');
+const API = require('../');
+const expect = require('expect.js');
+const config = require('./config');
 
 describe('api_common', function () {
   describe('isAccessTokenValid', function () {
@@ -30,16 +30,16 @@ describe('api_common', function () {
   });
 
   describe('getAccessToken', function () {
-    it('should ok', function* () {
+    it('should ok', async function () {
       var api = new API(config.appid, config.appsecret);
-      var token = yield api.getAccessToken();
+      var token = await api.getAccessToken();
       expect(token).to.only.have.keys('accessToken', 'expireTime');
     });
 
-    it('should not ok', function* () {
+    it('should not ok', async function () {
       var api = new API('appid', 'secret');
       try {
-        yield api.getAccessToken();
+        await api.getAccessToken();
       } catch (err) {
         expect(err).to.have.property('name', 'WeChatAPIError');
         expect(err).to.have.property('message', 'invalid credential');

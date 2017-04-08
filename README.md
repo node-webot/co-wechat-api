@@ -43,22 +43,24 @@ $ npm install co-wechat-api
 ```js
 var WechatAPI = require('co-wechat-api');
 
-var api = new WechatAPI(appid, appsecret);
-var result = yield api.updateRemark('open_id', 'remarked');
+async function() {
+  var api = new WechatAPI(appid, appsecret);
+  var result = await api.updateRemark('open_id', 'remarked');
+}
 ```
 
 ### 多进程
 当多进程时，token需要全局维护，以下为保存token的接口：
 
 ```js
-var api = new API('appid', 'secret', function* () {
+var api = new API('appid', 'secret', async function () {
   // 传入一个获取全局token的方法
-  var txt = yield fs.readFile('access_token.txt', 'utf8');
+  var txt = await fs.readFile('access_token.txt', 'utf8');
   return JSON.parse(txt);
-}, function* (token) {
+}, async function (token) {
   // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
   // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
-  yield fs.writeFile('access_token.txt', JSON.stringify(token));
+  await fs.writeFile('access_token.txt', JSON.stringify(token));
 });
 ```
 
@@ -75,8 +77,6 @@ var api = new API('appid', 'secret', function* () {
 
 ## 详细API
 原始API文档请参见：[消息接口指南](http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南)。
-
-
 ## License
 The MIT license.
 
