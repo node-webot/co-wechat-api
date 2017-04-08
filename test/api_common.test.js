@@ -1,8 +1,8 @@
 'use strict';
 
-var API = require('../');
-var expect = require('expect.js');
-var config = require('./config');
+const API = require('../');
+const expect = require('expect.js');
+const config = require('./config');
 
 describe('api_common', function () {
   describe('isAccessTokenValid', function () {

@@ -77,8 +77,6 @@ var api = new API('appid', 'secret', async function () {
 
 ## 详细API
 原始API文档请参见：[消息接口指南](http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南)。
-
-
 ## License
 The MIT license.
 
