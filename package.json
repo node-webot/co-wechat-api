@@ -1,6 +1,6 @@
 {
   "name": "co-wechat-api",
-  "version": "2.7.1",
+  "version": "3.0.0",
   "description": "微信公共平台Node库API，ES6版本",
   "main": "index.js",
   "scripts": {
@@ -17,20 +17,18 @@
   "dependencies": {
     "co-fs": "^1.2.0",
     "formstream": ">=0.0.8",
-    "httpx": "^2.0.0"
+    "httpx": "^2.1.1"
   },
   "devDependencies": {
     "co-mocha": "*",
     "coveralls": "*",
-    "eslint": "~3.3.0",
+    "eslint": "*",
     "expect.js": "*",
-    "istanbul": "*",
     "mocha": "*",
-    "mocha-lcov-reporter": "*",
     "muk": "*",
+    "nyc": "^10.2.0",
     "rewire": "*",
-    "travis-cov": "*",
-    "urllib": "*"
+    "travis-cov": "*"
   },
   "author": "Jackson Tian",
   "license": "MIT",
