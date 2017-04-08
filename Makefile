@@ -8,12 +8,14 @@ lint:
 	@eslint --fix lib index.js test
 
 test: lint
+	@mocha -t $(TIMEOUT) -R spec $(TESTS)
+
+test-cov:
 	@nyc --reporter=html --reporter=text mocha -t $(TIMEOUT) -R spec $(TESTS)
 
 test-coveralls:
+	@nyc mocha -t $(TIMEOUT) -R spec $(TESTS)
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@nyc report --reporter=text-lcov | coveralls
-
-test-all: test test-coveralls
 
 .PHONY: test
