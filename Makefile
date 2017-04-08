@@ -7,7 +7,7 @@ PATH := ./node_modules/.bin:$(PATH)
 lint:
 	@eslint --fix lib index.js test
 
-test:
+test: lint
 	@NODE_ENV=test mocha -R $(REPORTER) -t $(TIMEOUT) \
 		$(MOCHA_OPTS) \
 		$(TESTS)
