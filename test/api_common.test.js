@@ -36,13 +36,25 @@ describe('api_common', function () {
       expect(token).to.only.have.keys('accessToken', 'expireTime');
     });
 
-    it('should not ok', async function () {
+    it('should not ok with invalid appid', async function () {
       var api = new API('appid', 'secret');
       try {
         await api.getAccessToken();
       } catch (err) {
         expect(err).to.have.property('name', 'WeChatAPIError');
-        expect(err).to.have.property('message', 'invalid credential');
+        expect(err).to.have.property('message');
+        expect(err.message).to.match(/invalid appid/);
+      }
+    });
+
+    it('should not ok with invalid appsecret', async function () {
+      var api = new API(config.appid, 'appsecret');
+      try {
+        await api.getAccessToken();
+      } catch (err) {
+        expect(err).to.have.property('name', 'WeChatAPIError');
+        expect(err).to.have.property('message');
+        expect(err.message).to.match(/invalid appsecret/);
       }
     });
   });
