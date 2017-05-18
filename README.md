@@ -89,24 +89,27 @@ QQ群：157964097，使用疑问，开发，贡献代码请加群。
 ```
 
  project  : co-wechat-api
- repo age : 2 years, 5 months
- active   : 31 days
- commits  : 95
+ repo age : 2 years, 6 months
+ active   : 37 days
+ commits  : 109
  files    : 50
  authors  :
-    65  Jackson Tian  68.4%
-     7  肥鼠          7.4%
-     6  magicxie      6.3%
-     3  马剑          3.2%
-     2  pillarhou     2.1%
-     2  Lei           2.1%
-     2  sunwf         2.1%
-     2  TimZhang      2.1%
-     2  ken           2.1%
-     1  ladjzero      1.1%
-     1  Jichao Wu     1.1%
-     1  HelloYou      1.1%
-     1  mukaiu        1.1%
+    75  Jackson Tian  68.8%
+     7  肥鼠          6.4%
+     6  magicxie      5.5%
+     3  马剑          2.8%
+     2  TimZhang      1.8%
+     2  Ziyi Yan      1.8%
+     2  ken           1.8%
+     2  Lei           1.8%
+     2  pillarhou     1.8%
+     2  sunwf         1.8%
+     1  Jichao Wu     0.9%
+     1  HelloYou      0.9%
+     1  swfbarhr      0.9%
+     1  ladjzero      0.9%
+     1  三点          0.9%
+     1  mukaiu        0.9%
 
 ```
 
