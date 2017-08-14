@@ -1,6 +1,8 @@
-var API = require('../');
-var expect = require('expect.js');
-var config = require('./config');
+'use strict';
+
+const API = require('../');
+const expect = require('expect.js');
+const config = require('./config');
 
 describe('api_common', function () {
   describe('isAccessTokenValid', function () {
@@ -28,19 +30,31 @@ describe('api_common', function () {
   });
 
   describe('getAccessToken', function () {
-    it('should ok', function* () {
+    it('should ok', async function () {
       var api = new API(config.appid, config.appsecret);
-      var token = yield api.getAccessToken();
+      var token = await api.getAccessToken();
       expect(token).to.only.have.keys('accessToken', 'expireTime');
     });
 
-    it('should not ok', function* () {
+    it('should not ok with invalid appid', async function () {
       var api = new API('appid', 'secret');
       try {
-        yield api.getAccessToken();
+        await api.getAccessToken();
       } catch (err) {
         expect(err).to.have.property('name', 'WeChatAPIError');
-        expect(err).to.have.property('message', 'invalid credential');
+        expect(err).to.have.property('message');
+        expect(err.message).to.match(/invalid appid/);
+      }
+    });
+
+    it('should not ok with invalid appsecret', async function () {
+      var api = new API(config.appid, 'appsecret');
+      try {
+        await api.getAccessToken();
+      } catch (err) {
+        expect(err).to.have.property('name', 'WeChatAPIError');
+        expect(err).to.have.property('message');
+        expect(err.message).to.match(/invalid appsecret/);
       }
     });
   });
