@@ -4,7 +4,8 @@
   "description": "微信公共平台Node库API，ES6版本",
   "main": "index.js",
   "scripts": {
-    "test": "make test-all"
+    "test": "make test-all",
+    "test-file": "mocha -R spec"
   },
   "repository": {
     "type": "git",
@@ -19,11 +20,10 @@
     "httpx": "^2.1.1"
   },
   "devDependencies": {
-    "co-mocha": "*",
     "coveralls": "*",
     "eslint": "*",
     "expect.js": "*",
-    "mocha": "*",
+    "mocha": "^4.0.1",
     "muk": "*",
     "nyc": "^10.2.0",
     "rewire": "*",
