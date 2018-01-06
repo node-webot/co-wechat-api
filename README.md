@@ -43,22 +43,24 @@ $ npm install co-wechat-api
 ```js
 var WechatAPI = require('co-wechat-api');
 
-var api = new WechatAPI(appid, appsecret);
-var result = yield api.updateRemark('open_id', 'remarked');
+async function() {
+  var api = new WechatAPI(appid, appsecret);
+  var result = await api.updateRemark('open_id', 'remarked');
+}
 ```
 
 ### 多进程
 当多进程时，token需要全局维护，以下为保存token的接口：
 
 ```js
-var api = new API('appid', 'secret', function* () {
+var api = new API('appid', 'secret', async function () {
   // 传入一个获取全局token的方法
-  var txt = yield fs.readFile('access_token.txt', 'utf8');
+  var txt = await fs.readFile('access_token.txt', 'utf8');
   return JSON.parse(txt);
-}, function* (token) {
+}, async function (token) {
   // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
   // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
-  yield fs.writeFile('access_token.txt', JSON.stringify(token));
+  await fs.writeFile('access_token.txt', JSON.stringify(token));
 });
 ```
 
@@ -75,8 +77,6 @@ var api = new API('appid', 'secret', function* () {
 
 ## 详细API
 原始API文档请参见：[消息接口指南](http://mp.weixin.qq.com/wiki/index.php?title=消息接口指南)。
-
-
 ## License
 The MIT license.
 
@@ -89,24 +89,27 @@ QQ群：157964097，使用疑问，开发，贡献代码请加群。
 ```
 
  project  : co-wechat-api
- repo age : 2 years
- active   : 28 days
- commits  : 82
+ repo age : 2 years, 6 months
+ active   : 37 days
+ commits  : 109
  files    : 50
  authors  :
-    53  Jackson Tian  64.6%
-     7  肥鼠          8.5%
-     6  magicxie      7.3%
-     3  马剑          3.7%
-     2  Lei           2.4%
-     2  ken           2.4%
-     2  TimZhang      2.4%
-     2  pillarhou     2.4%
-     1  ladjzero      1.2%
-     1  Jichao Wu     1.2%
-     1  HelloYou      1.2%
-     1  mukaiu        1.2%
-     1  sunwf         1.2%
+    75  Jackson Tian  68.8%
+     7  肥鼠          6.4%
+     6  magicxie      5.5%
+     3  马剑          2.8%
+     2  TimZhang      1.8%
+     2  Ziyi Yan      1.8%
+     2  ken           1.8%
+     2  Lei           1.8%
+     2  pillarhou     1.8%
+     2  sunwf         1.8%
+     1  Jichao Wu     0.9%
+     1  HelloYou      0.9%
+     1  swfbarhr      0.9%
+     1  ladjzero      0.9%
+     1  三点          0.9%
+     1  mukaiu        0.9%
 
 ```
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var API = require('./lib/api_common');
+const API = require('./lib/api_common');
 // 菜单接口
 API.mixin(require('./lib/api_menu'));
 // 分组管理
