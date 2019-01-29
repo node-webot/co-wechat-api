@@ -1,5 +1,6 @@
 node_modules
 example
 .DS_Store
+.idea
 coverage
 .nyc_output
