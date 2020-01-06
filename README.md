@@ -9,7 +9,7 @@ Wechat API(ES6版)
 - [![Coverage Status](https://coveralls.io/repos/node-webot/co-wechat-api/badge.png)](https://coveralls.io/r/node-webot/co-wechat-api)
 
 ## 功能列表
-- 发送客服消息（文本、图片、语音、视频、音乐、图文）
+- 发送客服消息（文本、图片、语音、视频、音乐、图文、小程序卡片）
 - 菜单操作（查询、创建、删除、个性化菜单）
 - 二维码（创建临时、永久二维码，查看二维码URL）
 - 分组操作（查询、创建、修改、移动用户到分组）
@@ -27,6 +27,7 @@ Wechat API(ES6版)
 - JSSDK服务端支持
 - 素材管理
 - 摇一摇周边
+- 小程序订阅消息（暂仅支持发送）
 
 详细参见[API文档](http://doxmate.cool/node-webot/co-wechat-api/api.html)
 
