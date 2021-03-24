@@ -1,5 +1,5 @@
 {
-  "name": "co-wechat-api",
+  "name": "co-wechat-api-new",
   "version": "3.11.0",
   "description": "微信公共平台Node库API，ES6版本",
   "main": "index.js",
@@ -30,7 +30,7 @@
     "rewire": "*",
     "travis-cov": "*"
   },
-  "author": "Jackson Tian",
+  "author": "Salamander",
   "license": "MIT",
   "readmeFilename": "README.md",
   "directories": {
